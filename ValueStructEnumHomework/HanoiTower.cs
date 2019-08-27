@@ -29,9 +29,9 @@ namespace ValueStructEnumHomework
                     }
                 }
             }
-            TowerSet[0][DIMENTION_2 - 1] = Disks.TowerA;
-            TowerSet[1][DIMENTION_2 - 1] = Disks.TowerB;
-            TowerSet[2][DIMENTION_2 - 1] = Disks.TowerC;
+            TowerSet[0][NAME_POSITION] = Disks.TowerA;
+            TowerSet[1][NAME_POSITION] = Disks.TowerB;
+            TowerSet[2][NAME_POSITION] = Disks.TowerC;
         }
 
         public void Show()
@@ -46,16 +46,18 @@ namespace ValueStructEnumHomework
             }
         }
 
-        public void TransferDisks(int n, Disks[] TowerA, Disks[] TowerB, Disks[] TowerC)
+        public void TransferDisks(int height, Disks[] TowerA, Disks[] TowerB, Disks[] TowerC)
         {
-            if (n >= 0)
+            if (height >= 0)
             {
-                TransferDisks(n - 1, TowerA, TowerC, TowerB);
-                Console.WriteLine("Move disk " + TowerA[n] + " from " + TowerA[NAME_POSITION] + " to " + TowerB[NAME_POSITION]);
-                var tmp = TowerA[n];
-                TowerA[n] = Disks.Empty;
-                TowerB[n] = tmp;
-                TransferDisks(n - 1, TowerC, TowerB, TowerA);
+                TransferDisks(height - 1, TowerA, TowerC, TowerB);
+                Console.WriteLine("Move disk " + TowerA[height] + " from " + TowerA[NAME_POSITION] + " to " + TowerB[NAME_POSITION]);
+                var tmp = TowerA[height];
+                TowerA[height] = Disks.Empty;
+                TowerB[height] = tmp;
+                Show();
+                Console.WriteLine();
+                TransferDisks(height - 1, TowerC, TowerB, TowerA);
             }
         }
 

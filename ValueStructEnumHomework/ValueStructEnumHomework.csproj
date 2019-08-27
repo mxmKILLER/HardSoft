@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrHomework.cs" />
     <Compile Include="DateCompare.cs" />
     <Compile Include="HanoiTower.cs" />
     <Compile Include="Program.cs" />

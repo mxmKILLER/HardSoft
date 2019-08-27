@@ -30,7 +30,7 @@ namespace ValueStructEnumHomework
         {
             if ((date.Month > 0 && date.Month <= MAX_MONTH) && (date.Year >= date1.Year && date.Year < date2.Year) || (date.Year == date2.Year && date.Month == date2.Month))
             {
-                return true;
+                return true; 
             }
             return false;
         }
@@ -47,6 +47,5 @@ namespace ValueStructEnumHomework
         public int Year { get; set; }
 
         public int Month { get; set; }
-
     }
 }
