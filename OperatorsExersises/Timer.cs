@@ -130,7 +130,7 @@ namespace OperatorsExersises
                 stringBuilder.Append(":00");
                 stringBuilder.Append(Milliseconds.ToString());
             }
-            Console.WriteLine(stringBuilder);
+            Console.WriteLine(stringBuilder.ToString());
         }
 
         public override bool Equals(object obj)

@@ -10,7 +10,7 @@ namespace OperatorsExersises
     {
         static void Main(string[] args)
         {
-            Clock clock = new Clock(20,70,95);
+            Clock clock = new Clock(20,60,95);
             Clock clock2 = new Clock(20, 70, 90);
 
             Timer timer1 = new Timer(61, 180, 400);
