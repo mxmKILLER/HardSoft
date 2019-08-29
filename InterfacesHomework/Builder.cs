@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfacesHomework
 {
-    class Builder : IDeveloper
+    class Builder : IDeveloper,IComparable
     {
         public string Tool { get ; set ; }
 
@@ -28,8 +28,7 @@ namespace InterfacesHomework
         public int CompareTo(object obj)
         {
             if (obj == null) return 1;
-            IDeveloper builder = obj as IDeveloper;
-            if (builder != null)
+            if (obj is IDeveloper builder)
                 return String.Compare(this.Tool, builder.Tool);
             else
                 throw new ArgumentException("Object is not a builder");

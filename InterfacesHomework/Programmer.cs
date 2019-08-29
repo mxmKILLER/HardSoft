@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfacesHomework
 {
-    class Programmer : IDeveloper
+    class Programmer : IDeveloper,IComparable
     {
         public string Tool { get ; set; }
 
@@ -32,9 +32,8 @@ namespace InterfacesHomework
         public int CompareTo(object obj)
         {
             if (obj == null) return 1;
-            IDeveloper programmer = obj as IDeveloper;
-            if (programmer != null)
-                return String.Compare(this.Tool,programmer.Tool);
+            if (obj is IDeveloper programmer)
+                return String.Compare(this.Tool, programmer.Tool);
             else
                 throw new ArgumentException("Object is not a programmer");
         }     

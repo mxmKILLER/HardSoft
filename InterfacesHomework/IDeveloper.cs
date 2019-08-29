@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfacesHomework
 {
-    public interface IDeveloper : IComparable
+    public interface IDeveloper
     {
         string Tool { get; set; }
 
