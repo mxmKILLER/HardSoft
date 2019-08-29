@@ -125,7 +125,7 @@ namespace OperatorsExersises
                 stringBuilder.Append(":0");
                 stringBuilder.Append(Seconds.ToString());
             }
-            Console.WriteLine(stringBuilder);
+            Console.WriteLine(stringBuilder.ToString());
         }
 
         public override bool Equals(object obj)
