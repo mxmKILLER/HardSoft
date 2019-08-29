@@ -33,7 +33,7 @@ namespace InterfacesHomework
         {
             if (obj == null) return 1;
             if (obj is IDeveloper programmer)
-                return String.Compare(this.Tool, programmer.Tool);
+                return Tool.CompareTo(programmer.Tool);
             else
                 throw new ArgumentException("Object is not a programmer");
         }     
