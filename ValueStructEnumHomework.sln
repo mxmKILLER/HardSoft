@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorsExersises", "Opera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesHomework", "InterfacesHomework\InterfacesHomework.csproj", "{97A91B83-E4CA-4422-9818-F555CAFC91E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircleLinkedListHomework", "CircleLinkedListHomework\CircleLinkedListHomework.csproj", "{D617AE73-0359-419A-98C6-5702FCF2A6B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{97A91B83-E4CA-4422-9818-F555CAFC91E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97A91B83-E4CA-4422-9818-F555CAFC91E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97A91B83-E4CA-4422-9818-F555CAFC91E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D617AE73-0359-419A-98C6-5702FCF2A6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D617AE73-0359-419A-98C6-5702FCF2A6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D617AE73-0359-419A-98C6-5702FCF2A6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D617AE73-0359-419A-98C6-5702FCF2A6B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
