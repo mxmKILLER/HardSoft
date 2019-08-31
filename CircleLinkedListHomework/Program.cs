@@ -10,7 +10,7 @@ namespace CircleLinkedListHomework
     {
         static void Main(string[] args)
         {
-            RemoveKid(10, 15);    
+            RemoveKid(10, 18);    
         }
 
         private static void Deletion(CircleList<Child> list,int num)
@@ -53,7 +53,7 @@ namespace CircleLinkedListHomework
 
             while (numOfKids != 1)
             {
-                int removeIndex = Math.Abs(numOfWords % numOfKids);
+                int removeIndex = numOfWords % numOfKids;
                 numOfKids--;
                 Deletion(list, idList[removeIndex]);
                 idList.RemoveAt(removeIndex);
