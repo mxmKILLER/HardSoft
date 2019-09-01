@@ -11,11 +11,12 @@ namespace CircleLinkedListHomework
     {
         public CircleListNode<T> Head { get; set; }
 
-        public int Count { get; set; }
+        public int Count { get; set; } = 0;
 
         public CircleList()
         {
-
+            Head = null;
+            Count = 0;
         }
 
         public CircleList(T data)
@@ -41,6 +42,22 @@ namespace CircleLinkedListHomework
             }
         }
 
+        public CircleListNode<T> GetByIndex(int index)
+        {
+            var result = new CircleListNode<T>();
+            var current = Head;
+            for (int i = 0; i < Count; i++)
+            {
+                if (i == index)
+                {
+                    result = current;
+                    break;
+                }
+                current = current.Next;
+            }
+            return result;
+        }
+
         public void Delete(T data)
         {
             if (Head.Data.Equals(data))
@@ -53,7 +70,7 @@ namespace CircleLinkedListHomework
             var current = Head.Next;
             for (int i = 0; i < Count; i++)
             {
-                if (current.Data.Equals(data) && current != null)
+                if (current != null && current.Data.Equals(data))
                 {
                     RemoveItem(current);
                 }
@@ -61,10 +78,14 @@ namespace CircleLinkedListHomework
             }
         }
 
-        private void RemoveItem(CircleListNode<T> current)
+        public void RemoveItem(CircleListNode<T> current)
         {
             current.Next.Previous = current.Previous;
             current.Previous.Next = current.Next;
+            if (current.Equals(Head))
+            {
+                Head = Head.Next;
+            }
             Count--;
         }
 
@@ -73,7 +94,7 @@ namespace CircleLinkedListHomework
             Head = new CircleListNode<T>(data);
             Head.Next = Head;
             Head.Previous = Head;
-            Count = 1;
+            Count++;
         }
 
         public IEnumerator GetEnumerator()
@@ -85,5 +106,6 @@ namespace CircleLinkedListHomework
                 current = current.Next;
             }
         }
+
     }
 }

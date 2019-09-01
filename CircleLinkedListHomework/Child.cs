@@ -35,6 +35,11 @@ namespace CircleLinkedListHomework
             return child.Id;
         }
 
+        public override bool Equals(object obj)
+        {
+            return Id == ((Child)obj).Id;
+        }
+
         public override string ToString()
         {
             return Id.ToString() + " "  + Name.ToString();

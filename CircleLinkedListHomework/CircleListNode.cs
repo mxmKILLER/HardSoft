@@ -14,6 +14,11 @@ namespace CircleLinkedListHomework
 
         public CircleListNode<T> Previous { get; set; }
 
+        public CircleListNode()
+        {
+            Data = default(T);
+        }
+
         public CircleListNode(T data)
         {
             Data = data;
