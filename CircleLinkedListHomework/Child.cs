@@ -44,5 +44,20 @@ namespace CircleLinkedListHomework
         {
             return Id.ToString() + " "  + Name.ToString();
         }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -1919740922;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + Name.GetHashCode();
+            return hashCode;
+        }
+
+        //public override bool Equals(object obj)
+        //{
+        //    return obj is Child child &&
+        //           Id == child.Id &&
+        //           Name == child.Name;
+        //}
     }
 }

@@ -63,7 +63,7 @@ namespace CircleLinkedListHomework
             if (Head.Data.Equals(data))
             {
                 RemoveItem(Head);
-                Head = Head.Next;
+               // Head = Head.Next;
                 return;
             }
 

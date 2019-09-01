@@ -17,7 +17,7 @@ namespace CircleLinkedListHomework
             //    list.Add(new Child(i, (Child.Names)(i % 6)));
             //}
 
-            //list.Delete(new Child() {Id = 3});
+            //list.Delete(new Child() { Id = 3 });
 
             //foreach (var item in list)
             //{
